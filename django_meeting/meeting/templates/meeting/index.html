@@ -19,25 +19,6 @@ All Meetups
 {% block body %}
   <section>
     <h2>Upcoming Meetups!</h2>
-    <ol>
-      {% for meetup_items in meetup %}
-        <li class="meetup-item">
-          <article>
-            <div class="meetup-summary">
-              <div class="meetup-image">
-                <img src="" alt="" />
-              </div>
-              <div class="meetup-details">
-                <h3>{{ meetup_items.title }}</h3>
-                <address>{{ meetup_items.location }}</address>
-              </div>
-            </div>
-            <div class="meetup-actions">
-              <a href="{% url 'meetup-detail' meetup_items.slug %}" class="btn">More Details</a>
-            </div>
-          </article>
-        </li>
-      {% endfor %}
-    </ol>
+    {% include "meeting/includes/meetup-item.html" %}
   </section>
 {% endblock %}
