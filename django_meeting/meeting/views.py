@@ -14,11 +14,11 @@ def index(request):
     })
 
 
-def meetup_detail(request):
+def meetup_detail(request, meetup_slug):
     meetup_detail = {
         "title": "Dilluminati",
         "description": "meetup will be on this time and at this date BOOK NOW",
-        }
+    }
 
     return render(request, "meeting/detail.html", {
         "title": meetup_detail["title"],
